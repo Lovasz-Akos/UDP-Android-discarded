@@ -6,23 +6,119 @@
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/next"
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_measurementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mérés Neve:"
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/txt_measurementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_measurementDuaration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mérési idő"
+                android:textAlignment="textEnd" />
+
+            <EditText
+                android:id="@+id/txt_measurementDuaration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/lbl_durationMinute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perc" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/lbl_measurementFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mérési gyakoriság"
+                android:textAlignment="textEnd" />
+
+            <RadioGroup
+                android:id="@+id/rdbgrp_measurementFrequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rdb_measurementFrequency50"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50Hz" />
+
+                <RadioButton
+                    android:id="@+id/rdb_measurementFrequency100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100Hz" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="200dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <CheckBox
+                android:id="@+id/chk_testLed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Test LED" />
+
+            <Button
+                android:id="@+id/btn_startMeasurement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mérés Indítása" />
+        </TableRow>
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
