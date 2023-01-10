@@ -1,1 +1,2 @@
-UDP Android QNSZT
+# UDP Android QNSZT
+Discarded project
